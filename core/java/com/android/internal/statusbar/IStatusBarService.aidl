@@ -92,4 +92,6 @@ interface IStatusBarService
 
     void startAssist(in Bundle args);
     void showCustomIntentAfterKeyguard(inout Intent intent);
+    void setAutoRotate(boolean enabled);
+    void screenPinningStateChanged(boolean enabled);
 }
