@@ -609,6 +609,16 @@ public class AudioService extends IAudioService.Stub {
         return "card=" + card + ";device=" + device + ";";
     }
 
+    // only these packages are allowed to override Pulse visualizer lock
+    private static final String[] VISUALIZER_WHITELIST = new String[] {
+            "android",
+            "com.android.systemui",
+            "com.android.keyguard",
+            "com.google.android.googlequicksearchbox"
+    };
+
+    private boolean mVisualizerLocked;
+
     ///////////////////////////////////////////////////////////////////////////
     // Construction
     ///////////////////////////////////////////////////////////////////////////
@@ -3618,6 +3628,25 @@ public class AudioService extends IAudioService.Stub {
         return (mMuteAffectedStreams & (1 << streamType)) != 0;
     }
 
+    /** @hide */
+    public boolean isVisualizerLocked(String callingPackage) {
+        boolean isSystem = false;
+        for (int i = 0; i < VISUALIZER_WHITELIST.length; i++) {
+            if (TextUtils.equals(callingPackage, VISUALIZER_WHITELIST[i])) {
+                isSystem = true;
+                break;
+            }
+        }
+        return !isSystem && mVisualizerLocked;
+    }
+
+    /** @hide */
+    public void setVisualizerLocked(boolean doLock) {
+        if (mVisualizerLocked != doLock) {
+            mVisualizerLocked = doLock;
+        }
+    }
+
     private void ensureValidDirection(int direction) {
         switch (direction) {
             case AudioManager.ADJUST_LOWER:
@@ -4727,11 +4756,7 @@ public class AudioService extends IAudioService.Stub {
                     break;
 
                 case MSG_PLAY_SOUND_EFFECT:
-                    if (isStreamMute(AudioSystem.STREAM_SYSTEM)) {
-                        Log.d(TAG, "Stream muted, skip playback");
-                    } else {
                         onPlaySoundEffect(msg.arg1, msg.arg2);
-                    }
                     break;
 
                 case MSG_BTA2DP_DOCK_TIMEOUT:

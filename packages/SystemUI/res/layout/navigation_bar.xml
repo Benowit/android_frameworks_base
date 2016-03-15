@@ -226,7 +226,7 @@
 
         </RelativeLayout>
 
-        <LinearLayout 
+        <LinearLayout
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:orientation="vertical"
@@ -256,7 +256,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:contentDescription="@string/accessibility_menu"
-                    android:src="@drawable/ic_sysbar_menu"
+                    android:src="@drawable/ic_sysbar_menu_land"
                     android:scaleType="centerInside"
                     android:layout_gravity="top"
                     android:visibility="invisible"
@@ -266,7 +266,7 @@
             <com.android.systemui.statusbar.policy.KeyButtonView android:id="@+id/recent_apps"
                 android:layout_height="@dimen/navigation_key_width"
                 android:layout_width="match_parent"
-                android:src="@drawable/ic_sysbar_recent"
+                android:src="@drawable/ic_sysbar_recent_land"
                 android:scaleType="center"
                 android:layout_weight="0"
                 android:contentDescription="@string/accessibility_recent"
@@ -280,7 +280,7 @@
             <com.android.systemui.statusbar.policy.KeyButtonView android:id="@+id/home"
                 android:layout_height="@dimen/navigation_key_width"
                 android:layout_width="match_parent"
-                android:src="@drawable/ic_sysbar_home"
+                android:src="@drawable/ic_sysbar_home_land"
                 android:scaleType="center"
                 systemui:keyCode="3"
                 systemui:keyRepeat="false"
@@ -296,7 +296,7 @@
             <com.android.systemui.statusbar.policy.KeyButtonView android:id="@+id/back"
                 android:layout_height="@dimen/navigation_key_width"
                 android:layout_width="match_parent"
-                android:src="@drawable/ic_sysbar_back"
+                android:src="@drawable/ic_sysbar_back_land"
                 android:scaleType="center"
                 systemui:keyCode="4"
                 android:layout_weight="0"
@@ -320,6 +320,7 @@
             >
             <ImageView
                 android:layout_height="@dimen/navigation_key_width"
+                android:layout_marginTop="@dimen/navigation_side_padding"
                 android:layout_width="match_parent"
                 android:src="@drawable/ic_sysbar_lights_out_dot_small"
                 android:scaleType="center"

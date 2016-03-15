@@ -25,7 +25,6 @@ import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.hardware.input.InputManager;
 import android.media.AudioManager;
-import android.os.Handler;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.util.AttributeSet;
@@ -43,6 +42,7 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.ImageView;
 
 import com.android.systemui.R;
+import com.android.systemui.statusbar.phone.NavbarEditor;
 
 import static android.view.accessibility.AccessibilityNodeInfo.ACTION_CLICK;
 import static android.view.accessibility.AccessibilityNodeInfo.ACTION_LONG_CLICK;
