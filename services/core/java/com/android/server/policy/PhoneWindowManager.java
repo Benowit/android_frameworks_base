@@ -777,11 +777,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     private boolean mClearedBecauseOfForceShow;
     private boolean mTopWindowIsKeyguard;
     private CMHardwareManager mCMHardware;
-
-    private CameraManager mCameraManager;
-    private boolean mTorchEnabled;
-    private boolean mIsTorchActive;
-    private boolean mWasTorchActive;
     private boolean mShowKeyguardOnLeftSwipe;
 
     private class PolicyHandler extends Handler {
