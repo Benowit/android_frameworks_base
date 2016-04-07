@@ -7710,7 +7710,6 @@ public final class Settings {
             MOUNT_UMS_NOTIFY_ENABLED,
             SLEEP_TIMEOUT,
             DOUBLE_TAP_TO_WAKE,
-            STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD,
             CAMERA_GESTURE_DISABLED
         };
 
