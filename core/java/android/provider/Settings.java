@@ -3598,35 +3598,6 @@ public final class Settings {
         public static final String STATUSBAR_BATTERY_BAR_THICKNESS = "statusbar_battery_bar_thickness";
 
         /**
-         * @hide
-         */
-        public static final String STATUSBAR_BATTERY_BAR_STYLE = "statusbar_battery_bar_style";
-
-        /**
-         * @hide
-         */
-        public static final String STATUSBAR_BATTERY_BAR_ANIMATE = "statusbar_battery_bar_animate";
-
-        /**
-         * Toast icon
-         *
-         * @hide
-         */
-        public static final String TOAST_ICON = "toast_icon";
-
-        /**
-         * show clear all recents button
-         *  @hide
-         */
-        public static final String SHOW_CLEAR_ALL_RECENTS = "show_clear_all_recents";
-
-        /**
-         * location of the clear all recents button
-         * @hide
-         */
-        public static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
-
-        /**
          * Whether to dismiss all recents tasks
          * @hide
          */
@@ -3663,67 +3634,10 @@ public final class Settings {
         public static final String ALLOW_LIGHTS = "allow_lights";
 
         /**
-         * Force expanded notifications on all apps that support it.
-         * @hide
-         */
-        public static final String FORCE_EXPANDED_NOTIFICATIONS = "force_expanded_notifications";
-
-        /**
-         * Disable Immersive Message
-         * @hide
-         */
-        public static final String DISABLE_IMMERSIVE_MESSAGE = "disable_immersive_message";
-
-        /**
-         * Disable FC Notifications
-         * @hide
-         */
-        public static final String DISABLE_FC_NOTIFICATIONS = "disable_fc_notifications";
-
-        /**
-         * Network traffic indicator, goes from least to greatest significant bitwise
-         * 0 = Display up-stream traffic if set
-         * 1 = Display down-stream traffic if set
-         * 2 = Show as Byte/s if set
-         * 16-31 = Refresh interval(ms) min: 250 max: 32750 default: 1000
-         * @hide
-         */
-        public static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
-
-        /**
-         * Whether or not to hide the network traffic indicator when there is no activity
-         * @hide
-         */
-        public static final String NETWORK_TRAFFIC_AUTOHIDE = "network_traffic_autohide";
-
-        /**
-         * Network traffic inactivity threshold (default is 10 kBs)
-         * @hide
-         */
-        public static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
-
-        /**
          * Whether to disable showing arrows in network traffic indicators
          * @hide
          */
         public static final String NETWORK_TRAFFIC_HIDEARROW = "network_traffic_hidearrow";
-
-        /**
-         * @hide
-         */
-        public static final String SHOW_SU_INDICATOR = "show_su_indicator";
-
-        /**
-         * Whether to use the custom status bar header or not
-         * @hide
-         */
-        public static final String STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
-
-        /**
-         * Current active provider
-         * @hide
-         */
-        public static final String STATUS_BAR_CUSTOM_HEADER_PROVIDER = "status_bar_custom_header_provider";
 
         /**
          * Status bar carrier label
@@ -3771,56 +3685,6 @@ public final class Settings {
          */
         public static final String SHOW_HEADSET_ICON = "show_headset_icon";
 
-        /**
-         * Whether to use gesture anywhere feature.
-         * @hide
-         */
-        @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
-        public static final String GESTURE_ANYWHERE_ENABLED = "gesture_anywhere_enabled";
-
-        /**
-         * Position of gesture anywhere trigger.  Value is either Gravity.LEFT or Gravity.RIGHT
-         * @hide
-         */
-        @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
-        public static final String GESTURE_ANYWHERE_POSITION = "gesture_anywhere_position";
-
-        /**
-         * Last time gestures were altered.
-         * Used to determine if gestures should be reloaded by the view.
-         * @hide
-         */
-        @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
-        public static final String GESTURE_ANYWHERE_CHANGED = "gesture_anywhere_changed";
-
-        /**
-         * Width of the gesture anywhere trigger.
-         * @hide
-         */
-        @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
-        public static final String GESTURE_ANYWHERE_TRIGGER_WIDTH = "gesture_anywhere_trigger_width";
-
-        /**
-         * Position of gesture anywhere trigger.
-         * @hide
-         */
-        @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
-        public static final String GESTURE_ANYWHERE_TRIGGER_TOP = "gesture_anywhere_trigger_top";
-
-        /**
-         * Height of the gesture anywhere trigger.
-         * @hide
-         */
-        @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
-        public static final String GESTURE_ANYWHERE_TRIGGER_HEIGHT = "gesture_anywhere_trigger_height";
-
-        /**
-         * Whether to display the gesture anywhere trigger region or not.
-         * Used internally for showing the trigger in settings so user can see its placement
-         * @hide
-         */
-        @ChaosLab(name="GestureAnywhere", classification=Classification.NEW_FIELD)
-        public static final String GESTURE_ANYWHERE_SHOW_TRIGGER = "gesture_anywhere_show_trigger";
 
         /**
          * Status bar weather temperature
@@ -4112,12 +3976,6 @@ public final class Settings {
         public static final String APP_CIRCLE_BAR_SHOW_TRIGGER = "app_circle_bar_show_trigger";
 
         /**
-         * Alternative recent apps integration using OmniSwitch
-         * @hide
-         */
-        public static final String RECENTS_USE_OMNISWITCH = "recents_use_omniswitch";
-
-        /**
          * Whether to use default custom header or poly hd
          * 0 = default
          * 1 = poly hd
@@ -4375,13 +4233,6 @@ public final class Settings {
         public static final String LISTVIEW_INTERPOLATOR = "listview_interpolator";
 
         /**
-         * Toast animations
-         *
-         * @hide
-         */
-        public static final String TOAST_ANIMATION = "toast_animation";
-
-        /**
          *
          * @hide
          */
@@ -4415,21 +4266,7 @@ public final class Settings {
          */
         public static final String PA_PIE_ALWAYS_RIGHT = "pa_pie_always_right";
 
-        /**
-         * Defines the shortcuts to be shown on lockscreen
-         * Usage is like this: target:icon|target:icon|target:icon
-         * if :icon is not set, default application icon will be used
-         * @hide
-         */
-        public static final String LOCKSCREEN_SHORTCUTS = "lockscreen_shortcuts";
-
-        /**
-         * Whether shorcuts open with normal or longpress
-         * @hide
-         */
-        public static final String LOCKSCREEN_SHORTCUTS_LONGPRESS = "lockscreen_shortcuts_longpress";
-
-        /**
+         /**
          * Volume key controls ringtone or media sound stream
          * @hide
          */
@@ -4447,13 +4284,6 @@ public final class Settings {
          * @hide
          */
         public static final String DOUBLE_TAP_VIBRATE = "double_tap_vibrate";
-
-        /**
-         * Whether to enable status and navigation bar color in battery saver mode.
-         *
-         * @hide
-         */
-        public static final String BATTERY_SAVER_MODE_COLOR = "battery_save_mode_color";
 
         /**
          * Timeout for ambient display notification
@@ -4480,240 +4310,16 @@ public final class Settings {
         public static final String DOZE_TRIGGER_NOTIFICATION = "doze_trigger_notification";
 
         /**
-         * @deprecated Use {@link android.provider.Settings.Global#UNLOCK_SOUND}
-         * instead
-         * @hide
-         */
-        @Deprecated
-        public static final String UNLOCK_SOUND = Global.UNLOCK_SOUND;
-
-        /**
-         * Receive incoming SIP calls?
-         * 0 = no
-         * 1 = yes
-         * @hide
-         */
-        public static final String SIP_RECEIVE_CALLS = "sip_receive_calls";
-
-        /** @hide */
-        public static final Validator SIP_RECEIVE_CALLS_VALIDATOR = sBooleanValidator;
-
-        /**
-         * Call Preference String.
-         * "SIP_ALWAYS" : Always use SIP with network access
-         * "SIP_ADDRESS_ONLY" : Only if destination is a SIP address
-         * @hide
-         */
-        public static final String SIP_CALL_OPTIONS = "sip_call_options";
-
-        /** @hide */
-        public static final Validator SIP_CALL_OPTIONS_VALIDATOR = new DiscreteValueValidator(
-                new String[] {"SIP_ALWAYS", "SIP_ADDRESS_ONLY"});
-
-        /**
-         * One of the sip call options: Always use SIP with network access.
-         * @hide
-         */
-        public static final String SIP_ALWAYS = "SIP_ALWAYS";
-
-        /** @hide */
-        public static final Validator SIP_ALWAYS_VALIDATOR = sBooleanValidator;
-
-        /**
-         * One of the sip call options: Only if destination is a SIP address.
-         * @hide
-         */
-        public static final String SIP_ADDRESS_ONLY = "SIP_ADDRESS_ONLY";
-
-        /** @hide */
-        public static final Validator SIP_ADDRESS_ONLY_VALIDATOR = sBooleanValidator;
-
-        /**
-         * @deprecated Use SIP_ALWAYS or SIP_ADDRESS_ONLY instead.  Formerly used to indicate that
-         * the user should be prompted each time a call is made whether it should be placed using
-         * SIP.  The {@link com.android.providers.settings.DatabaseHelper} replaces this with
-         * SIP_ADDRESS_ONLY.
-         * @hide
-         */
-        @Deprecated
-        public static final String SIP_ASK_ME_EACH_TIME = "SIP_ASK_ME_EACH_TIME";
-
-        /** @hide */
-        public static final Validator SIP_ASK_ME_EACH_TIME_VALIDATOR = sBooleanValidator;
-
-        /**
-         * Pointer speed setting.
-         * This is an integer value in a range between -7 and +7, so there are 15 possible values.
-         *   -7 = slowest
-         *    0 = default speed
-         *   +7 = fastest
-         * @hide
-         */
-        public static final String POINTER_SPEED = "pointer_speed";
-
-        /** @hide */
-        public static final Validator POINTER_SPEED_VALIDATOR =
-                new InclusiveFloatRangeValidator(-7, 7);
-
-        /**
-         * Show icon when stylus is used?
-         * 0 = no
-         * 1 = yes
-         * @hide
-         */
-        public static final String STYLUS_ICON_ENABLED = "stylus_icon_enabled";
-
-        /**
-         * Enable Stylus Gestures
-         *
-         * @hide
-         */
-        public static final String ENABLE_STYLUS_GESTURES = "enable_stylus_gestures";
-
-        /**
-         * Left Swipe Action
-         *
-         * @hide
-         */
-        public static final String GESTURES_LEFT_SWIPE = "gestures_left_swipe";
-
-        /**
-         * Right Swipe Action
-         *
-         * @hide
-         */
-        public static final String GESTURES_RIGHT_SWIPE = "gestures_right_swipe";
-
-        /**
-         * Up Swipe Action
-         *
-         * @hide
-         */
-        public static final String GESTURES_UP_SWIPE = "gestures_up_swipe";
-
-        /**
-         * down Swipe Action
-         *
-         * @hide
-         */
-        public static final String GESTURES_DOWN_SWIPE = "gestures_down_swipe";
-
-        /**
-         * Long press Action
-         *
-         * @hide
-         */
-        public static final String GESTURES_LONG_PRESS = "gestures_long_press";
-
-        /**
-         * double tap Action
-         *
-         * @hide
-         */
-        public static final String GESTURES_DOUBLE_TAP = "gestures_double_tap";
-
-        /**
          * Statusbar crDroid logo
          * @hide
          */
         public static final String STATUS_BAR_CRDROID_LOGO = "status_bar_crdroid_logo";
 
         /**
-         * Whether lock-to-app will be triggered by long-press on recents.
-         * @hide
-         */
-        public static final String LOCK_TO_APP_ENABLED = "lock_to_app_enabled";
-
-        /** @hide */
-        public static final Validator LOCK_TO_APP_ENABLED_VALIDATOR = sBooleanValidator;
-
-        /**
-         * I am the lolrus.
-         * <p>
-         * Nonzero values indicate that the user has a bukkit.
-         * Backward-compatible with <code>PrefGetPreference(prefAllowEasterEggs)</code>.
-         * @hide
-         */
-        public static final String EGG_MODE = "egg_mode";
-
-        /**
          * show the membar in recents
          *  @hide
          */
         public static final String SYSTEMUI_RECENTS_MEM_DISPLAY = "systemui_recents_mem_display";
-
-        /** @hide */
-        public static final Validator EGG_MODE_VALIDATOR = new Validator() {
-            @Override
-            public boolean validate(String value) {
-                try {
-                    return Long.parseLong(value) >= 0;
-                } catch (NumberFormatException e) {
-                    return false;
-                }
-            }
-        };
-
-        /**
-         * IMPORTANT: If you add a new public settings you also have to add it to
-         * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
-         * it to PRIVATE_SETTINGS below. Also add a validator that can validate
-         * the setting value. See an example above.
-         */
-
-         /**
-         * Whether wifi settings will connect to access point automatically
-         * 0 = automatically
-         * 1 = manually
-         * @hide
-         */
-        public static final String WIFI_AUTO_CONNECT_TYPE = "wifi_auto_connect_type";
-
-        /**
-          * Volume keys control cursor in text fields (default is 0)
-          * 0 - Disabled
-          * 1 - Volume up/down moves cursor left/right
-          * 2 - Volume up/down moves cursor right/left
-          * @hide
-          */
-         public static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
-
-        /**
-         * Whether to enable voice wakeup.  The value is boolean (1 or 0).
-         * @hide
-         */
-        public static final String VOICE_WAKEUP = "voice_wakeup";
-
-        /**
-         * An intent (a flattened Uri String) to launch when user voice launch
-         * action is detected. An empty or null string will launch the default
-         * voice search activity.
-         * @hide
-         */
-        public static final String VOICE_LAUNCH_INTENT = "voice_launch_intent";
-
-        /**
-         * Volume key controls ringtone or media sound stream
-         * @hide
-         */
-        public static final String VOLUME_KEYS_CONTROL_RING_STREAM =
-                "volume_keys_control_ring_stream";
-
-        /**
-         * Whether to show the battery bar
-         * @hide
-         */
-        public static final String STATUSBAR_BATTERY_BAR = "statusbar_battery_bar";
-
-        /**
-         * @hide
-         */
-        public static final String STATUSBAR_BATTERY_BAR_COLOR = "statusbar_battery_bar_color";
-
-        /**
-         * @hide
-         */
-        public static final String STATUSBAR_BATTERY_BAR_THICKNESS = "statusbar_battery_bar_thickness";
 
         /**
          * @hide
