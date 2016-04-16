@@ -799,15 +799,15 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         mScrimSrcModeEnabled = mContext.getResources().getBoolean(
                 R.bool.config_status_bar_scrim_behind_use_src);
 
+        mStatusBarWindow = new StatusBarWindowView(mContext, null);
+        mStatusBarWindow.setService(this);
+
         ThemeConfig currentTheme = mContext.getResources().getConfiguration().themeConfig;
         if (currentTheme != null) {
             mCurrentTheme = (ThemeConfig)currentTheme.clone();
         } else {
             mCurrentTheme = ThemeConfig.getBootTheme(mContext.getContentResolver());
         }
-
-        mStatusBarWindow = new StatusBarWindowView(mContext, null);
-        mStatusBarWindow.setService(this);
 
         super.start(); // calls createAndAddWindows()
 
