@@ -526,14 +526,14 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
             // This method reads CMSettings.Secure.RECENTS_LONG_PRESS_ACTIVITY
             updateCustomRecentsLongPressHandler(false);
 
-    public void setStatusBarViewVisibility(boolean visible) {
-        mStatusBarView.setVisibility(visible ? View.VISIBLE : View.INVISIBLE);
-    }
-
             mCrdroidLogo = Settings.System.getIntForUser(resolver,
                     Settings.System.STATUS_BAR_CRDROID_LOGO, 0, mCurrentUserId) == 1;
             showCrdroidLogo(mCrdroidLogo);
         }
+    }
+
+    public void setStatusBarViewVisibility(boolean visible) {
+        mStatusBarView.setVisibility(visible ? View.VISIBLE : View.INVISIBLE);
     }
 
     // ensure quick settings is disabled until the current user makes it through the setup wizard
