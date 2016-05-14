@@ -46,21 +46,10 @@ public class SpamFilter {
     }
 
     public static String getNotificationContent(Notification notification) {
-        CharSequence notificationTitle = getNotificationTitle(notification);
-        CharSequence notificationMessage = getNotificationMessage(notification);
-        return notificationTitle + "\n" + notificationMessage;
-    }
-
-    private static CharSequence getNotificationTitle(Notification notification) {
         Bundle extras = notification.extras;
         String titleExtra = extras.containsKey(Notification.EXTRA_TITLE_BIG)
                 ? Notification.EXTRA_TITLE_BIG : Notification.EXTRA_TITLE;
         CharSequence notificationTitle = extras.getCharSequence(titleExtra);
-        return notificationTitle;
-    }
-
-    private static CharSequence getNotificationMessage(Notification notification) {
-        Bundle extras = notification.extras;
         CharSequence notificationMessage = extras.getCharSequence(Notification.EXTRA_TEXT);
 
         if (TextUtils.isEmpty(notificationMessage)) {
@@ -71,12 +60,6 @@ public class SpamFilter {
                 notificationMessage = TextUtils.join("\n", inboxLines);
             }
         }
-        return notificationMessage;
-    }
-
-    public static boolean hasFilterableContent(Notification notification) {
-        CharSequence notificationTitle = getNotificationTitle(notification);
-        CharSequence notificationMessage = getNotificationMessage(notification);
-        return !(TextUtils.isEmpty(notificationTitle) && TextUtils.isEmpty(notificationMessage));
+        return notificationTitle + "\n" + notificationMessage;
     }
 }

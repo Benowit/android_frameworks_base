@@ -974,14 +974,7 @@ public class AudioRecord
         final IBinder b = ServiceManager.getService(android.content.Context.AUDIO_SERVICE);
         final IAudioService ias = IAudioService.Stub.asInterface(b);
         try {
-            // If the caller tries to start recording with the HOTWORD input
-            // before AUDIO_SERVICE has started, IAudioService may not be available.
-            if (ias != null) {
-                ias.handleHotwordInput(listening);
-            } else {
-                Log.e(TAG, "Error talking to AudioService when handling hotword input, "
-                        + "AudioService unavailable");
-            }
+            ias.handleHotwordInput(listening);
         } catch (RemoteException e) {
             Log.e(TAG, "Error talking to AudioService when handling hotword input.", e);
         }

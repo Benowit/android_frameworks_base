@@ -366,13 +366,10 @@ public class QSDragPanel extends QSPanel implements View.OnDragListener, View.On
 
     protected void drawTile(TileRecord r, QSTile.State state) {
         if (mEditing) {
-            if ((r.tile instanceof CustomQSTile)
-                    && (((CustomQSTile) r.tile).isUserRemoved()
-                    || ((CustomQSTile) r.tile).getTile() == null)) {
-                // don't modify visibility state if removed, or not yet published
+            if ((r.tile instanceof CustomQSTile) && ((CustomQSTile) r.tile).isUserRemoved()) {
+                // don't modify visibility state.
             } else {
                 state.visible = true;
-                state.enabled = true;
             }
         }
         final int visibility = state.visible ? VISIBLE : GONE;
@@ -620,13 +617,6 @@ public class QSDragPanel extends QSPanel implements View.OnDragListener, View.On
         final Iterator<QSTile<?>> newTileIterator = tilesCollection.iterator();
         while (newTileIterator.hasNext()) {
             QSTile<?> tile = newTileIterator.next();
-            if (tile instanceof CustomQSTile) {
-                if (((CustomQSTile) tile).isUserRemoved()
-                        || ((CustomQSTile) tile).getTile() == null) {
-                    // tile not published yet
-                    continue;
-                }
-            }
             final int tileDestPage = getPagesForCount(runningCount + 1) - 1;
 
             if (DEBUG_TILES) {

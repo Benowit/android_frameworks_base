@@ -17299,8 +17299,14 @@ public class PackageManagerService extends IPackageManager.Stub {
         synchronized (mPackages) {
             pkgSetting = mSettings.mPackages.get(packageName);
 
-            if (pkgSetting == null || className == null) {
-                return false;
+            if (pkgSetting == null) {
+                if (className == null) {
+                    throw new IllegalArgumentException(
+                            "Unknown package: " + packageName);
+                }
+                throw new IllegalArgumentException(
+                        "Unknown component: " + packageName
+                                + "/" + className);
             }
             // Get all the protected components
             components = pkgSetting.getProtectedComponents(userId);
