@@ -3701,6 +3701,7 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         mIconController.updateResources();
         mScreenPinningRequest.onConfigurationChanged();
         mNetworkController.onConfigurationChanged();
+        mStatusBarWindowManager.onConfigurationChanged(newConfig);
     }
 
     @Override
@@ -4547,10 +4548,6 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
 
     boolean isSecure() {
         return mStatusBarKeyguardViewManager != null && mStatusBarKeyguardViewManager.isSecure();
-    }
-
-    public boolean isKeyguardInputRestricted() {
-        return mStatusBarKeyguardViewManager != null && mStatusBarKeyguardViewManager.isInputRestricted();
     }
 
     public long calculateGoingToFullShadeDelay() {
